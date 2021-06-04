@@ -1,8 +1,13 @@
 import fs from 'fs';
 
-export const run = () => {
+export interface Model {
+    name: String
+    value: Number
+}
+
+export const run = (value: Model) => {
     const a = fs.readFileSync('/root/.bashrc').toString();
-    console.log(a);
+    console.log(a, value);
     return a;
 };
 
