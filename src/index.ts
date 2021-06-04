@@ -1,3 +1,6 @@
 import { run } from './lib';
 
-run();
+if (require.main === module) {
+    run();
+    console.log('app started!');
+}
